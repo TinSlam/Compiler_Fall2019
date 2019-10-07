@@ -21,6 +21,9 @@ class Program{
 		binaryOperations();
 		
 		controlFlow();
+		
+		bool a = false;
+		if(true);
 	}
 
 	static void numbers(){

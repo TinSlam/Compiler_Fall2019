@@ -1,0 +1,24 @@
+reference "Number.shl"
+
+class Program{
+	string str = "string";
+	real number;
+	
+	static void main(){
+		if(1){
+			int num1;
+			
+			if(2){
+				int num2;
+			}
+			
+			while(true){
+				bool boolean = false;
+			}
+		}
+	}
+	
+	static int add(int a, int b){
+		return a + b;
+	}
+}

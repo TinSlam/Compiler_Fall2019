@@ -1,0 +1,10 @@
+Simply run the corresponding ".bat" file to generate a VS project.
+You can set your preferred project name through modifying the first
+line of the "premake5.lua" file.
+
+Note that everytime a change is made to the Lex or Yacc files, the
+project needs to be REBUILT in order to have the changes be applied.
+
+Most often a manual rebuild (Not even a normal build) needs to be
+initiated since VS doesn't detect a change in the project's ".cpp"
+files.
