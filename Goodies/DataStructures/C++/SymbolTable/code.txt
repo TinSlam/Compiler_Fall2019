@@ -1,0 +1,21 @@
+program main{
+	void func1(){
+		bool b1, b2;
+		real r1;
+	}
+	
+	int func2(){
+		real r1, r2;
+		int i1;
+		real r3;
+		bool b1, b2;
+		
+		while(true){
+			real r1, r2, r3, r4, r5;
+		}
+	
+		return 1;
+	}
+	
+	real r1;
+}
