@@ -24,7 +24,8 @@ project(projectName)
 	files{
 		(projectName .. "/**.h"),
 		(projectName .. "/**.cpp"),
-		(projectName .. "/Scanner.l")
+		(projectName .. "/Scanner.l"),
+		(projectName .. "/Parser.y")
 	}
 
 	includedirs{
@@ -33,8 +34,11 @@ project(projectName)
 	
 	prebuildcommands{
 		"del /f lex.yy.cpp",
+		"del /f Parser.tab.cpp",
 		"flex Scanner.l",
-		"rename lex.yy.c lex.yy.cpp"
+		"bison -d -v Parser.y",
+		"rename lex.yy.c lex.yy.cpp",
+		"rename Parser.tab.c Parser.tab.cpp"
 	}
 
 	filter "system:windows"
@@ -65,6 +69,14 @@ end
 
 if(not os.isfile(projectName .. "\\Scanner.l")) then
 	os.copyfile("../TinSlam/Scanner.l", (projectName .. "/Scanner.l"))
+end
+
+if(not os.isfile(projectName .. "\\Parser.tab.cpp")) then
+	os.copyfile("../TinSlam/Parser.tab.cpp", (projectName .. "/Parser.tab.cpp"))
+end
+
+if(not os.isfile(projectName .. "\\Parser.y")) then
+	os.copyfile("../TinSlam/Parser.y", (projectName .. "/Parser.y"))
 end
 
 function copyDirectory(src, dst)
