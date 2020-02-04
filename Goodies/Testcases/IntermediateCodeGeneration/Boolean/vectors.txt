@@ -1,9 +1,9 @@
 class Program{
 	static void _main(){
-		double sum;
-		double something;
-		double length1;
-		double length2;
+		real sum;
+		real something;
+		real length1;
+		real length2;
 		
 		sum = 0;
 		
